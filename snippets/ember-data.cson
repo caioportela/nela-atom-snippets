@@ -32,16 +32,16 @@
     'body': "this.store.queryRecord('${1:model}', { ${2:queryKey}: ${3:queryValue}});"
 
   '@attr(...)':
-    'prefix': '@attr'
+    'prefix': 'attr'
     'leftLabel': 'Ember Data'
-    'body': "@attr('${1:string}')"
+    'body': "attr('${2:string}') ${1};"
 
   '@belongsTo(...)':
-    'prefix': '@belongsTo'
+    'prefix': 'belongsTo'
     'leftLabel': 'Ember Data'
-    'body': "@belongsTo('${1:model}')"
+    'body': "belongsTo('${2:model}') ${1}"
 
   '@hasMany(...)':
-    'prefix': '@hasMany'
+    'prefix': 'hasMany'
     'leftLabel': 'Ember Data'
-    'body': "@hasMany('${1:model}')"
+    'body': "hasMany('${2:model}') ${1}"
