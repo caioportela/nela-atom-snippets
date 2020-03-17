@@ -3,11 +3,15 @@
 #   handlebars
 # /////////////////////////////////////
 '.text.html.handlebars':
-  'Ember: get':
-    'prefix': 'get'
-    'body': "{{get '${1}'}}"
+  'Ember: {{fn}}':
+    'prefix': 'fn'
+    'body': 'fn this.${1}'
 
-  'Ember: let':
+  'Ember: {{get}}':
+    'prefix': 'get'
+    'body': 'get "${1}"'
+
+  'Ember: {{let}}':
     'prefix': 'let'
     'body': """
       {{#let ${1} as |${2}|}}
@@ -15,17 +19,21 @@
       {{/let}}
     """
 
-  'Ember: helper':
+  'Ember: {{helper}}':
     'prefix': 'helper'
-    'body': "{{${1:get} '${2}'}}"
+    'body': '${1:get} "${2}"'
+
+  'Ember: {{on ...}}'
+    'prefix': 'on'
+    'body': 'on "${2:click}" this.${1}'
 
   'Ember: closure helper':
     'prefix': 'chelper'
-    'body': "(${1:get} '${2}')"
+    'body': '(${1:get} "${2}")'
 
   'Ember: action':
     'prefix': 'action'
-    'body': "{{action '${1:actionName}' ${2:argument}}}"
+    'body': 'action "${1:actionName}" ${2:argument}'
 
   'Ember: #each/else':
     'prefix': 'eachelse'
