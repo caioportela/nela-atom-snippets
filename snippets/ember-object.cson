@@ -1,0 +1,193 @@
+'.source.js, .source.ts':
+  #
+  # @ember/object
+  #
+
+  '@action':
+    'prefix': 'action'
+    'leftLabel': '@ember/object'
+    'body': """
+      action
+      ${1}() {
+        ${2}
+      }
+    """
+
+  #
+  # @ember/object/computed
+  #
+
+  '@computed(...)':
+    'prefix': 'computed'
+    'leftLabel': 'Ember'
+    'body': """
+      computed('${2:property}')
+      get ${1}() {
+      \t${3:return; }
+      }
+    """
+
+  '@alias(...)':
+    'prefix': 'alias'
+    'leftLabel': '@ember/object'
+    'body': "alias('${1:key}') ${2};"
+
+  '@and(...)':
+    'prefix': 'and'
+    'leftLabel': '@ember/object'
+    'body': "and('${1:key1}', '${2:key2}') ${3:property};"
+
+  '@bool(...)':
+    'prefix': 'bool'
+    'leftLabel': '@ember/object'
+    'body': "bool(${1:key}) ${2:property};"
+
+  '@collect(...)':
+    'prefix': 'collect'
+    'leftLabel': '@ember/object'
+    'body': "collect(${1:keys}) ${2:property};"
+
+  '@empty(...)':
+    'prefix': 'empty'
+    'leftLabel': '@ember/object'
+    'body': "empty('${1:key}') ${2:property};"
+
+  '@equal(...)':
+    'prefix': 'equal'
+    'leftLabel': '@ember/object'
+    'body': "equal('${1:key}', ${2:value}) ${3:property};"
+
+  '@filter(...)':
+    'prefix': 'filter'
+    'leftLabel': '@ember/object'
+    'body': """
+      filter(${1:key}, function(${2:item}${3:, index}) {
+        return ${2:item};
+      }))
+      ${4:property};
+    """
+
+  '@filterBy(...)':
+    'prefix': 'filterBy'
+    'leftLabel': '@ember/object'
+    'body': "filterBy('${1:key}', ${2:propertyKey}, ${3:value}) ${4:property};"
+
+  '@gt(...)':
+    'prefix': 'gt'
+    'leftLabel': '@ember/object'
+    'body': "gt('${1:key}', ${2:value}) ${3:property};"
+
+  '@gte(...)':
+    'prefix': 'gte'
+    'leftLabel': '@ember/object'
+    'body': "gte('${1:key}', ${2:value}) ${3:property};"
+
+  '@intersect(...)':
+    'prefix': 'intersect'
+    'leftLabel': '@ember/object'
+    'body': "intersect('${1:key1}', '${2:key2}') ${3:property};"
+
+  '@lt(...)':
+    'prefix': 'lt'
+    'leftLabel': '@ember/object'
+    'body': "lt('${1:key}', ${2:value}) ${3:property};"
+
+  '@lte(...)':
+    'prefix': 'lte'
+    'leftLabel': '@ember/object'
+    'body': "lte('${1:key}', ${2:value}) ${3:property};"
+
+  '@map(...)':
+    'prefix': 'map'
+    'leftLabel': '@ember/object'
+    'body': """
+      map(${1:key}, function(${2:item}${3:, index}) {
+        return ${2:item};
+      }))
+      ${4:property};
+    """
+
+  '@mapBy(...)':
+    'prefix': 'mapBy'
+    'leftLabel': '@ember/object'
+    'body': "mapBy('${1:key}', '${2:propertyKey}') ${3:property};"
+
+  '@match(...)':
+    'prefix': 'match'
+    'leftLabel': '@ember/object'
+    'body': "match('${1:key}', ${2:regEx}) ${3:property};"
+
+  '@max(...)':
+    'prefix': 'max'
+    'leftLabel': '@ember/object'
+    'body': "max('${1:key}') ${2:property};"
+
+  '@min(...)':
+    'prefix': 'min'
+    'leftLabel': '@ember/object'
+    'body': "min('${1:key}') ${2:property};"
+
+  '@none(...)':
+    'prefix': 'none'
+    'leftLabel': '@ember/object'
+    'body': "none('${1:key}') ${2:property};"
+
+  '@not(...)':
+    'prefix': 'not'
+    'leftLabel': '@ember/object'
+    'body': "not('${1:key}') ${2:property};"
+
+  '@notEmpty(...)':
+    'prefix': 'notEmpty'
+    'leftLabel': '@ember/object'
+    'body': "notEmpty('${1:key}') ${2:property};"
+
+  '@oneWay(...)':
+    'prefix': 'oneWay'
+    'leftLabel': '@ember/object'
+    'body': "oneWay('${1:key}') ${2:property};"
+
+  '@or(...)':
+    'prefix': 'or'
+    'leftLabel': '@ember/object'
+    'body': "or('${1:key1}', '${2:key2}') ${3:property};"
+
+  '@readOnly(...)':
+    'prefix': 'readOnly'
+    'leftLabel': '@ember/object'
+    'body': "readOnly('${1:key}') ${2:property};"
+
+  '@reads(...)':
+    'prefix': 'reads'
+    'leftLabel': '@ember/object'
+    'body': "reads('${1:key}') ${2:property};"
+
+  '@setDiff(...)':
+    'prefix': 'setDiff'
+    'leftLabel': '@ember/object'
+    'body': "setDiff('${1:key1}', '${2:key2}') ${3:property};"
+
+  '@sort(...)':
+    'prefix': 'sort'
+    'leftLabel': '@ember/object'
+    'body': "sort('${1:itemsKey}', '${2:sortDefinition}') ${3:property};"
+
+  '@sum(...)':
+    'prefix': 'sum'
+    'leftLabel': '@ember/object'
+    'body': "sum('${1:key}') ${2:property};"
+
+  '@union(...)':
+    'prefix': 'union'
+    'leftLabel': '@ember/object'
+    'body': "union('${1:key1}', '${2:key2}') ${3:property};"
+
+  '@uniq(...)':
+    'prefix': 'uniq'
+    'leftLabel': '@ember/object'
+    'body': "uniq('${1:key}', '${2:propertyKey}') ${3:property};"
+
+  '@uniqBy(...)':
+    'prefix': 'uniqBy'
+    'leftLabel': '@ember/object'
+    'body': "uniqBy('${1:key}') ${2:property};"
