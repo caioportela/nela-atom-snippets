@@ -25,6 +25,7 @@
 
   'Ember: {{on ...}}'
     'prefix': 'on'
+    'leftLabel': 'Modifier'
     'body': 'on "${2:click}" this.${1}'
 
   'Ember: closure helper':

@@ -1,0 +1,14 @@
+'.text.html.handlebars':
+  'Nela Datepicker':
+    'prefix': 'neladatepicker'
+    'leftLabel': 'Nela Components'
+    'body': """
+      <NelaDatepicker @selected={{${1:this.selected}}} @onSelect={{action (mut ${1:this.selected}) value="date"}}/>
+    """
+
+  'Nela Datetimepicker':
+    'prefix': 'neladatetimepicker'
+    'leftLabel': 'Nela Components'
+    'body': """
+      <NelaDatetimepicker @selected={{${1:this.selected}}} @onSelect={{action (mut ${1:this.selected}) value="date"}}/>
+    """
