@@ -30,7 +30,7 @@
   '@alias(...)':
     'prefix': 'alias'
     'leftLabel': '@ember/object'
-    'body': "alias('${1:key}') ${2};"
+    'body': "alias('${1:model}') ${2};"
 
   '@and(...)':
     'prefix': 'and'
