@@ -6,6 +6,16 @@
 #
 
 '.source.js, .source.ts':
+  'try ... catch ...':
+    'prefix': 'try'
+    'body': """
+      try {
+        ${1}
+      } catch(e) {
+        ${2}
+      }
+    """
+
   'run(() => { ... })':
     'prefix': 'run'
     'leftLabel': 'Ember'
