@@ -6,7 +6,6 @@
 #
 
 '.source.js, .source.ts':
-
   'Route Skeleton':
     'prefix': 'route'
     'leftLabel': 'Ember'

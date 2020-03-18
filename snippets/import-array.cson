@@ -1,12 +1,11 @@
 '.source.js, .source.ts':
-
   'Ember.Array':
-    'prefix': 'imarray'
+    'prefix': 'imemberarray'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
     'body': "import EmberArray from '@ember/array';"
 
   'Ember.A':
-    'prefix': 'imemberArray'
+    'prefix': 'imA'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
     'body': "import { A } from '@ember/array';"
 

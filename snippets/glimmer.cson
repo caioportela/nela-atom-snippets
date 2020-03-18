@@ -1,0 +1,5 @@
+'.source.js, .source.ts':
+  '@tracked':
+    'prefix': 'tracked'
+    'leftLabel': '@glimmer/tracking'
+    'body': "tracked ${1};"

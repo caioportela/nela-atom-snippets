@@ -91,8 +91,8 @@
     'prefix': 'model'
     'leftLabel': 'Ember'
     'body': """
-      model(params = {}) {
-      \treturn this.store.query('${1}', params);
+      model(params, transition) {
+      \treturn ${1};
       },
     """
 
@@ -101,10 +101,9 @@
     'leftLabel': 'Ember'
     'body':"""
       setupController(controller, model) {
-      \tthis._super(controller, model);
+      \tsuper.setupController(controller, model);
       \t${1}
-      },
-
+      }
     """
 
   'Route: beforeModel(...) { ... }':
@@ -112,10 +111,8 @@
     'leftLabel': 'Ember'
     'body':"""
       beforeModel(transition) {
-      \tthis._super(controller, model);
       \t${1}
-      },
-
+      }
     """
 
   'Route: afterModel(...) { ... }':
@@ -123,10 +120,8 @@
     'leftLabel': 'Ember'
     'body':"""
       afterModel(model, transition) {
-      \tthis._super(controller, model);
       \t${1}
-      },
-
+      }
     """
 
   #
@@ -246,27 +241,27 @@
     'prefix': 'some'
     'leftLabel': 'Ember Enumerable'
     'body': """
-      ${1:enumerable}.some(function(${2:item}) {
+      some((${1:item}) => {
       \t${3}
       });
     """
 
   '.isAny(...)':
-    'prefix': 'is-any'
+    'prefix': 'isany'
     'leftLabel': 'Ember Enumerable'
-    'body': "${1:enumerable}.isAny('${2:property}', ${3:bool});"
+    'body': "isAny('${1:property}', ${2:bool});"
 
   '.toArray(...)':
-    'prefix': 'to-array'
+    'prefix': 'toarray'
     'leftLabel': 'Ember Enumerable'
-    'body': '${1:enumerable}.toArray();'
+    'body': 'toArray();'
 
-  '.get(\'firstObject\')':
-    'prefix': 'first-object'
+  '.firstObject':
+    'prefix': 'firstObject'
     'leftLabel': 'Ember Enumerable'
-    'body': "${1:enumerable}.get('firstObject');"
+    'body': "firstObject;"
 
-  '.get(\'lastObject\')':
-    'prefix': 'last-object'
+  '.lastObject':
+    'prefix': 'lastobject'
     'leftLabel': 'Ember Enumerable'
-    'body': "${1:enumerable}.get('lastObject');"
+    'body': ".lastObject;"

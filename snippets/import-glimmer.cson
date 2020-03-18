@@ -1,0 +1,5 @@
+'.source.js, .source.ts':
+  'Glimmer.tracked':
+    'prefix': 'imtracked'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { tracked } from '@glimmer/tracking';"

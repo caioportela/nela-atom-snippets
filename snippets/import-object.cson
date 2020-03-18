@@ -1,5 +1,4 @@
 '.source.js, .source.ts':
-
   'Ember.Object':
     'prefix': 'imobject'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
@@ -14,6 +13,11 @@
     'prefix': 'imobservable'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
     'body': "import Observable from '@ember/object/observable';"
+
+  'Ember.action':
+    'prefix': 'imaction'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { action } from '@ember/object';"
 
   'Ember.addListener':
     'prefix': 'imaddListener'
