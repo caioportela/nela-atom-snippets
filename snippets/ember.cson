@@ -134,6 +134,22 @@
       }
     """
 
+  'Route: activate(...) { ... }':
+    'prefix': 'activate'
+    'body': """
+      deactivate() {
+        this.controller.model.rollbackAttributes();
+      }
+    """
+
+  'Route: deactivate(...) { ... }':
+    'prefix': 'deactivate'
+    'body': """
+      deactivate() {
+        this.controller.model.rollbackAttributes();
+      }
+    """
+
   #
   #
   # Component Snippets
