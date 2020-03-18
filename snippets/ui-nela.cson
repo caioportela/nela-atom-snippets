@@ -1,0 +1,75 @@
+'.text.html.handlebars':
+  '<UiAvatar>':
+    'prefix': 'UiAvatar'
+    'leftLabel': 'Ui Nela'
+    'body': '<UiAvatar @src={{${2:@user.avatar}}} class="avatar-${1:4}"/>'
+
+  '<UiCard>':
+    'prefix': 'UiCard'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiCard as |Card|>
+        <Card.header>${1}</Card.header>
+
+        <Card.body>
+          ${2}
+        </Card.body>
+      </UiCard>
+    """
+
+  '<UiCheckbox>':
+    'prefix': 'UiCheckbox'
+    'leftLabel': 'Ui Nela'
+    'body': '<UiCheckbox @checked={{${2:this.required}}}>${1}</UiCheckbox>'
+
+  '<UiModal>':
+    'prefix': 'UiModal'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiModal @open={{true}} @onCloseModal={{fn this.closeModal}} as |Modal|>
+        <Modal.title>${1}</Modal.title>
+
+        <Modal.body>
+          ${2}
+        </Modal.body>
+
+        <Modal.footer as |Footer|>
+          <Footer.cancel/>
+          <Footer.submit @click={{perform this.save}}/>
+        </Modal.footer>
+      </UiModal>
+    """
+
+  '<UiPage>':
+    'prefix': 'UiPage'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiPage as |Page|>
+        <Page.header as |Header|>
+          <Header.title>${1}</Header.title>
+
+          <Header.breadcrumbs as |Crumb|>
+            <Crumb.link @text="Início" @link="home"/>
+            <Crumb.link @text="${2}"/>
+          </Header.breadcrumbs>
+        </Page.header>
+
+        <Page.section>
+
+        </Page.section>
+      </UiPage>
+    """
+
+  '<UiRadio>':
+    'prefix': 'UiRadio'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiRadio @option="${1:option}" @selected={{${2:this.selected}} @onChange={{fn (mut ${2:this.selected)}}>
+        ${1}
+      </UiRadio>
+    """
+
+  '<UiTextarea>':
+    'prefix': 'UiTextarea'
+    'leftLabel': 'Ui Nela'
+    'body': '<UiTextarea class="form-control" @value={{${1:this.description}}}/>'

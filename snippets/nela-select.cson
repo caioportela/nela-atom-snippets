@@ -1,0 +1,18 @@
+'.text.html.handlebars':
+  'Nela Select':
+    'prefix': 'NelaSelect'
+    'leftLabel': 'Nela Select'
+    'body': """
+      <NelaSelect @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |record|>
+        {{record}}
+      </NelaSelect>
+    """
+
+  'Nela Select Multiple':
+    'prefix': 'NelaSelectMultiple'
+    'leftLabel': 'Nela Select'
+    'body': """
+      <NelaSelectMultiple @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |record|>
+        {{record}}
+      </NelaSelectMultiple>
+    """
