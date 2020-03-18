@@ -101,9 +101,9 @@
     'prefix': 'model'
     'leftLabel': 'Ember'
     'body': """
-      model(params, transition) {
+      model() {
       \treturn ${1};
-      },
+      }
     """
 
   'Route: setupController(...) { ... }':

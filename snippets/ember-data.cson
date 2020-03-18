@@ -1,6 +1,11 @@
 # Ember Data Snippets
 
 '.source.js, .source.ts':
+  'store.createRecord(...)':
+    'prefix': 'createRecord'
+    'leftLabel': 'Ember Data'
+    'body': "createRecord('${1:model}');"
+
   'store.findAll(...)':
     'prefix': 'findAll'
     'leftLabel': 'Ember Data'
