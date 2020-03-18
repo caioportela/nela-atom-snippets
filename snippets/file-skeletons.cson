@@ -7,7 +7,7 @@
 
 '.source.js, .source.ts':
   'Route Skeleton':
-    'prefix': 'route'
+    'prefix': 'route-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import Route from '@ember/routing/route';
@@ -22,7 +22,7 @@
     """
 
   'Controller Skeleton':
-    'prefix': 'controller'
+    'prefix': 'controller-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import Controller from '@ember/controller';
@@ -33,7 +33,7 @@
     """
 
   'Service Skeleton':
-    'prefix': 'service'
+    'prefix': 'service-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import Service from '@ember/service';
@@ -44,7 +44,7 @@
     """
 
   'Component Skeleton':
-    'prefix': 'component'
+    'prefix': 'component-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import Component from '@ember/component';
@@ -54,19 +54,8 @@
       });
     """
 
-  'Mixin Skeleton':
-    'prefix': 'mixin'
-    'leftLabel': 'Ember'
-    'body': """
-      import Mixin from '@ember/object/mixin';
-
-      export default Mixin.create({
-      \t${1:// body}
-      });
-    """
-
   'Object Skeleton':
-    'prefix': 'object'
+    'prefix': 'object-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import EmberObject from '@ember/object';
@@ -88,7 +77,7 @@
     """
 
   'Helper Skeleton':
-    'prefix': 'helper'
+    'prefix': 'helper-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import Helper from '@ember/component/helper';
@@ -101,7 +90,7 @@
     """
 
   'Model Skeleton':
-    'prefix': 'model'
+    'prefix': 'model-skeleton'
     'leftLabel': 'Ember'
     'body': """
       import DS from 'ember-data';

@@ -1,0 +1,90 @@
+'.source.js, .source.ts':
+  'Ember-Concurrency.task':
+    'prefix': 'imtask'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { task } from 'ember-concurrency';"
+
+  'Ember-Concurrency.dropTask':
+    'prefix': 'imdropTask'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { dropTask } from 'ember-concurrency-decorators';"
+
+  'Ember-Concurrency.enqueueTask':
+    'prefix': 'imenqueueTask'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { enqueueTask } from 'ember-concurrency-decorators';"
+
+  'Ember-Concurrency.keepLatestTask':
+    'prefix': 'imkeepLatestTask'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { keepLatestTask } from 'ember-concurrency-decorators';"
+
+  'Ember-Concurrency.restartableTask':
+    'prefix': 'imrestartableTask'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { restartableTask } from 'ember-concurrency-decorators';"
+
+  '@enqueueTask':
+    'prefix': 'enqueueTask'
+    'body': """
+      enqueueTask
+      *${1}() {
+        try {
+          ${2:yield}
+        } catch(e) {
+          this.swal.catch(e);
+        }
+      }
+    """
+
+  '@dropTask':
+    'prefix': 'dropTask'
+    'body': """
+      dropTask
+      *${1}() {
+        try {
+          ${2:yield}
+        } catch(e) {
+          this.swal.catch(e);
+        }
+      }
+    """
+
+  '@keepLatestTask':
+    'prefix': 'keepLatestTask'
+    'body': """
+      keepLatestTask
+      *${1}() {
+        try {
+          ${2:yield}
+        } catch(e) {
+          this.swal.catch(e);
+        }
+      }
+    """
+
+  '@restartableTask':
+    'prefix': 'restartableTask'
+    'body': """
+      restartableTask
+      *${1}() {
+        try {
+          ${2:yield}
+        } catch(e) {
+          this.swal.catch(e);
+        }
+      }
+    """
+
+  'task(...)':
+    'prefix': 'task'
+    'leftLabel': 'Ember Concurrency'
+    'body': """
+      task(function*() {
+        try {
+          ${1:yield}
+        } catch(e) {
+          this.swal.catch(e);
+        }
+      }).drop(),
+    """
