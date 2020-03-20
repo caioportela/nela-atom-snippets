@@ -49,3 +49,8 @@
     'prefix': 'imresolver'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
     'body': "import Resolver from '@ember/application/resolver';"
+
+  'Ember Moment':
+    'prefix': 'immoment'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import moment from 'moment';"
