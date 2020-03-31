@@ -1,0 +1,13 @@
+'.text.html.handlebars':
+  'Nela Paging':
+    'prefix': 'NelaPaging'
+    'leftLabel': 'Nela Dataloader'
+    'body': """
+      <NelaPaging @modelName="${1}" @filters={{${2:this.filters}}} @endpoint="${3}" as |Paging|>
+        {{#each Paging.records as |record|}}
+
+        {{/each}}
+
+        <Paging.LoadMore/>
+      </NelaPaging>
+    """
