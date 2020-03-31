@@ -3,8 +3,8 @@
     'prefix': 'NelaSelect'
     'leftLabel': 'Nela Select'
     'body': """
-      <NelaSelect @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |record|>
-        {{record}}
+      <NelaSelect @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |option|>
+        {{option}}
       </NelaSelect>
     """
 
@@ -12,7 +12,7 @@
     'prefix': 'NelaSelectMultiple'
     'leftLabel': 'Nela Select'
     'body': """
-      <NelaSelectMultiple @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |record|>
-        {{record}}
+      <NelaSelectMultiple @selected={{${2:this.selected}}} @modelName="${1:model}" @endpoint="${3:endpoint}" as |option|>
+        {{option}}
       </NelaSelectMultiple>
     """
