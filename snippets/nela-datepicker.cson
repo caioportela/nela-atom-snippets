@@ -3,12 +3,12 @@
     'prefix': 'neladatepicker'
     'leftLabel': 'Nela Datepicker'
     'body': """
-      <NelaDatepicker @selected={{${1:this.selected}}} @onSelect={{action (mut ${1:this.selected}) value="date"}}/>
+      <NelaDatepicker @selected={{${1:this.selected}}}/>
     """
 
   'Nela Datetimepicker':
     'prefix': 'neladatetimepicker'
     'leftLabel': 'Nela Datepicker'
     'body': """
-      <NelaDatetimepicker @selected={{${1:this.selected}}} @onSelect={{action (mut ${1:this.selected}) value="date"}}/>
+      <NelaDatetimepicker @selected={{${1:this.selected}}}/>
     """
