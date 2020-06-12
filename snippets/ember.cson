@@ -290,4 +290,4 @@
   '.lastObject':
     'prefix': 'lastobject'
     'leftLabel': 'Ember Enumerable'
-    'body': ".lastObject;"
+    'body': "lastObject;"
