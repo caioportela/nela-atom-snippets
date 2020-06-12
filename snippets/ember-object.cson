@@ -61,10 +61,10 @@
     'prefix': 'filter'
     'leftLabel': '@ember/object'
     'body': """
-      filter(${1:key}, function(${2:item}${3:, index}) {
+      filter('${1:key}', function(${2:item}) {
         return ${2:item};
-      }))
-      ${4:property};
+      })
+      ${3:property};
     """
 
   '@filterBy(...)':
