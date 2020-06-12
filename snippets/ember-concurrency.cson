@@ -4,6 +4,11 @@
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
     'body': "import { task } from 'ember-concurrency';"
 
+  'Ember-Concurrency.timeout':
+    'prefix': 'imtimeout'
+    'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
+    'body': "import { timeout } from 'ember-concurrency';"
+
   'Ember-Concurrency.dropTask':
     'prefix': 'imdropTask'
     'leftLabelHTML': '<span style="color:#E46651">Ember module</span>'
