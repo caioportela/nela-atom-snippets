@@ -40,12 +40,12 @@
   '@bool(...)':
     'prefix': 'bool'
     'leftLabel': '@ember/object'
-    'body': "bool(${1:key}) ${2:property};"
+    'body': "bool('${1:key}') ${2:property};"
 
   '@collect(...)':
     'prefix': 'collect'
     'leftLabel': '@ember/object'
-    'body': "collect(${1:keys}) ${2:property};"
+    'body': "collect('${1:keys}') ${2:property};"
 
   '@empty(...)':
     'prefix': 'empty'
@@ -101,10 +101,10 @@
     'prefix': 'map'
     'leftLabel': '@ember/object'
     'body': """
-      map(${1:key}, function(${2:item}${3:, index}) {
+      map('${1:key}', function(${2:item}) {
         return ${2:item};
-      }))
-      ${4:property};
+      })
+      ${3:property};
     """
 
   '@mapBy(...)':
