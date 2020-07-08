@@ -22,6 +22,69 @@
     'leftLabel': 'Ui Nela'
     'body': '<UiCheckbox @checked={{${2:this.required}}}>${1}</UiCheckbox>'
 
+  '<UiCrud>':
+    'prefix': 'UiCrud'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiCrud as |Crud|>
+        <Crud.List as |List|>
+          <List.Header as |Header|>
+            <Header.LinkTo @route="">
+              <i class="fa fa-plus"></i>
+              Novo ${1:registro}
+            </Header.LinkTo>
+          </List.Header>
+
+          <List.ListGroup>
+            <NelaPaging @modelName="" @endpoint="" @filters={{this.filter}} as |Paging|>
+              {{#each Paging.records as |record|}}
+                ${2}
+              {{/each}}
+
+              <Paging.LoadMore/>
+            </NelaPaging>
+          </List.ListGroup>
+        </Crud.List>
+
+        {{outlet}}
+      </UiCrud>
+    """
+
+  '<UiCrud::View>':
+    'prefix': 'UiCrudView'
+    'leftLabel': 'Ui Nela'
+    'body': """
+      <UiCrud::View as |View|>
+        <View.Section as |Section|>
+          <Section.Header class="d-flex align-items-center">
+            <h6 class="flex-fill font-weight-bold mb-0">${1:Dados gerais}</h6>
+
+            <LinkTo @route="" @model={{}} class="btn btn-link" title="Editar">
+              <i class="fa fa-edit"></i>
+            </LinkTo>
+
+            <button class="btn btn-link text-danger" onclick={{perform this.remove}} title="Remover">
+              <i class="fa fa-trash"></i>
+            </button>
+          </Section.Header>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item py-3">
+
+            </li>
+          </ul>
+        </View.Section>
+
+        <View.Section as |Section|>
+          <Section.Body>
+
+          </Section.Body>
+        </View.Section>
+      </UiCrud::View>
+
+    """
+
+
   '<UiModal>':
     'prefix': 'UiModal'
     'leftLabel': 'Ui Nela'
