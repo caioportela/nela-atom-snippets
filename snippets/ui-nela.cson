@@ -72,4 +72,4 @@
   '<UiTextarea>':
     'prefix': 'UiTextarea'
     'leftLabel': 'Ui Nela'
-    'body': '<UiTextarea class="form-control" @value={{${1:this.description}}}/>'
+    'body': '<UiTextarea class="form-control" @value={{${1:this.description}}} @placeholder="${2}"/>'
