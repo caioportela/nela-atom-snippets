@@ -64,8 +64,8 @@
     'prefix': 'UiRadio'
     'leftLabel': 'Ui Nela'
     'body': """
-      <UiRadio @option="${1:option}" @selected={{${2:this.selected}}} @onChange={{fn (mut ${2:this.selected)}}}>
-        ${1}
+      <UiRadio @option="${1:option}" @selected={{${2:this.selected}}} @onChange={{fn (mut ${2:this.selected})}}>
+        ${3}
       </UiRadio>
     """
 
