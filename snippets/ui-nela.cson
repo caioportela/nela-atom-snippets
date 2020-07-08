@@ -9,11 +9,11 @@
     'leftLabel': 'Ui Nela'
     'body': """
       <UiCard as |Card|>
-        <Card.header>${1}</Card.header>
+        <Card.Header>${1}</Card.Header>
 
-        <Card.body>
+        <Card.Body>
           ${2}
-        </Card.body>
+        </Card.Body>
       </UiCard>
     """
 
