@@ -154,6 +154,16 @@
   #
   # Component Snippets
   #
+  'Component: constructor() { ... }':
+    'prefix': 'constructor'
+    'leftLabel': 'Ember'
+    'body': """
+      constructor(owner, args) {
+        super(owner, args);
+        ${1}
+      }
+    """
+
   'Component: didReceiveAttrs() { ... }':
     'prefix': 'didReceiveAttrs'
     'leftLabel': 'Ember'

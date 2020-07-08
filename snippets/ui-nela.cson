@@ -26,17 +26,17 @@
     'prefix': 'UiModal'
     'leftLabel': 'Ui Nela'
     'body': """
-      <UiModal @open={{true}} @onCloseModal={{fn this.closeModal}} as |Modal|>
-        <Modal.title>${1}</Modal.title>
+      <UiModal @show={{${1:this.openModal}}} @toggle={{fn (mut ${1:this.openModal})}} @onClose={{fn this.closeModal}} as |Modal|>
+        <Modal.Title>${2}</Modal.Title>
 
-        <Modal.body>
-          ${2}
-        </Modal.body>
+        <Modal.Body>
+          ${3}
+        </Modal.Body>
 
-        <Modal.footer as |Footer|>
-          <Footer.cancel/>
-          <Footer.submit @click={{perform this.save}}/>
-        </Modal.footer>
+        <Modal.Footer as |Footer|>
+          <Footer.Close/>
+          <Footer.Submit onclick={{perform this.save}}/>
+        </Modal.Footer>
       </UiModal>
     """
 
