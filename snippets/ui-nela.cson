@@ -45,18 +45,18 @@
     'leftLabel': 'Ui Nela'
     'body': """
       <UiPage as |Page|>
-        <Page.header as |Header|>
-          <Header.title>${1}</Header.title>
+        <Page.Header as |Header|>
+          <Header.Title>${1}</Header.Title>
 
-          <Header.breadcrumbs as |Crumb|>
-            <Crumb.link @text="Início" @link="home"/>
-            <Crumb.link @text="${2}"/>
-          </Header.breadcrumbs>
-        </Page.header>
+          <Header.Breadcrumbs as |Crumb|>
+            <Crumb.Link @link="home">Início</Crumb.Link>
+            <Crumb.Link @link="">${2}</Crumb.Link>
+          </Header.Breadcrumbs>
+        </Page.Header>
 
-        <Page.section>
-
-        </Page.section>
+        <Page.Section>
+          ${3}
+        </Page.Section>
       </UiPage>
     """
 
